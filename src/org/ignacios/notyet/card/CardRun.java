@@ -9,27 +9,37 @@ public interface CardRun {
 
     /**
      * @param card a card
+     * @return true if the card can be legally added to the front of the run
+     */
+    boolean doesCardPrependRun(Card card);
+
+    /**
+     * @param card a card
      * @return true if the card can legally be added to the run
      */
     boolean doesCardExtendRun(Card card);
 
     /**
      * Calculates the number of cards between the provided card
-     * and the card run.
-     * NOTE:  A card already inside the run, or a card that extends the run
-     * will return 0.
+     * and the card run's lowest card.
+     * NOTE:  A card already inside the run, or an empty run (can that happen?) will return 0
+     * NOTE:  Cards whose value is higher than the card run's lowest card, but not a
+     * part of the card run will return -1
      * @param card a card
-     * @return the number of cards between the provided card and the card run.
+     * @return the number of cards between the provided card and the card run's lowest card.
      */
-    int distanceFromRun(Card card);
+    int distanceFromStart(Card card);
 
     /**
-     * attempt to add a {@link Card} to the run
-     * @param card the card to add
-     * @return the new card run
-     * @throws IllegalArgumentException if the card cannot be added to the run
+     * Calculates the number of cards between the provided card
+     * and the card run's highest card.
+     * NOTE:  A card already inside the run, or an empty run (can that happen?) will return 0
+     * NOTE:  Cards whose value is lower than the card run's highest card, but not a
+     * part of the card run will return -1
+     * @param card a card
+     * @return the number of cards between the provided card and the card run's lowest card.
      */
-    CardRun addCard(Card card);
+    int distanceFromEnd(Card card);
 
     /**
      * @return the cards inside this run.

@@ -1,4 +1,4 @@
-package org.ignacios.notyet.player;
+package org.ignacios.notyet.state;
 
 public interface PlayerId {
 

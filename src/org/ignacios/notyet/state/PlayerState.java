@@ -1,7 +1,7 @@
 package org.ignacios.notyet.state;
 
+import org.ignacios.notyet.card.Card;
 import org.ignacios.notyet.card.CardRun;
-import org.ignacios.notyet.player.PlayerId;
 
 import java.util.Set;
 
@@ -14,6 +14,11 @@ public interface PlayerState {
      * @return the player's id
      */
     PlayerId getPlayerId();
+
+    /**
+     * @return the player's cards
+     */
+    Set<Card> getCards();
 
     /**
      * @return the player's card runs

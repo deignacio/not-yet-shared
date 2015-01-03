@@ -2,7 +2,7 @@ package org.ignacios.notyet.turn;
 
 import org.ignacios.notyet.card.Card;
 import org.ignacios.notyet.player.Action;
-import org.ignacios.notyet.player.PlayerId;
+import org.ignacios.notyet.state.PlayerId;
 
 public interface Turn {
 

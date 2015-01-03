@@ -1,7 +1,6 @@
 package org.ignacios.notyet.state;
 
 import org.ignacios.notyet.card.Card;
-import org.ignacios.notyet.player.PlayerId;
 
 import java.util.List;
 
