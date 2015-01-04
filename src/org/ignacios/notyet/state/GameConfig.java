@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Class containing the initial game state
  */
-public interface InitialState {
+public interface GameConfig {
 
     /**
      * @return the smallest possible card in the game
